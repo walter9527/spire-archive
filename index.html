@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="尖塔档案：杀戮尖塔一代中文攻略站。收录 367 张卡牌、179 件遗物、42 瓶药水、4 位角色与 41 个敌人档案；支持卡牌升级前后对照、名称悬停图片预览，以及新手、职业、进阶 20 与 Boss 攻略。">
+<title>尖塔档案 · 杀戮尖塔一代中文图鉴与攻略</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2308090d'/%3E%3Cpath d='M32 6 20 52h24L32 6Z' fill='%23c9a45c'/%3E%3Cpath d='M32 18 27 52h10L32 18Z' fill='%2308090d'/%3E%3Ccircle cx='32' cy='10' r='3' fill='%23e7c98b'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css?v=20261045">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="reading-progress" id="reading-progress" aria-hidden="true"><span></span></div>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#/" aria-label="尖塔档案首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 36 48" fill="none"><path d="M18 2 7 40h22L18 2Z" stroke="currentColor" stroke-width="1.4"/><path d="M18 12 13 40h10L18 12Z" fill="currentColor" opacity=".5"/><path d="M4 44h28" stroke="currentColor" stroke-width="1.2"/><circle cx="18" cy="7" r="2" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-text"><strong>尖塔档案</strong><small>SPIRE ARCHIVE</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#/" data-nav="home">首页</a>
+      <a href="#/heroes" data-nav="heroes">角色</a>
+      <a href="#/cards" data-nav="cards">卡牌</a>
+      <a href="#/relics" data-nav="relics">遗物</a>
+      <a href="#/potions" data-nav="potions">药水</a>
+      <a href="#/enemies" data-nav="enemies">敌人</a>
+      <a href="#/guides" data-nav="guides">攻略</a>
+    </nav>
+    <div class="header-tools">
+      <button class="search-trigger" type="button" aria-label="打开搜索">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span>搜索</span><kbd>⌘K</kbd>
+      </button>
+      <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand footer-logo">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 48" fill="none"><path d="M18 2 7 40h22L18 2Z" stroke="currentColor" stroke-width="1.4"/><path d="M18 12 13 40h10L18 12Z" fill="currentColor" opacity=".5"/><path d="M4 44h28" stroke="currentColor" stroke-width="1.2"/><circle cx="18" cy="7" r="2" fill="currentColor"/></svg></span>
+        <span class="brand-text"><strong>尖塔档案</strong><small>SPIRE ARCHIVE</small></span>
+      </div>
+      <p>一座塔，四个职业，无数种死法。<br>把中文社区的经验整理成可以随时翻阅的档案。</p>
+      <div class="footer-stamp">非官方粉丝攻略站 · 1.0</div>
+    </div>
+    <div class="footer-col">
+      <h4>图鉴</h4>
+      <a href="#/cards">卡牌档案</a>
+      <a href="#/relics">遗物档案</a>
+      <a href="#/potions">药水档案</a>
+      <a href="#/enemies">敌人档案</a>
+      <a href="#/heroes">角色档案</a>
+    </div>
+    <div class="footer-col">
+      <h4>攻略</h4>
+      <a href="#/guide/beginner">新手开荒</a>
+      <a href="#/guide/ascension">进阶 20</a>
+      <a href="#/guide/boss">Boss 对策</a>
+      <a href="#/guide/economy">资源决策</a>
+    </div>
+    <div class="footer-col">
+      <h4>关于</h4>
+      <a href="#/about">资料与来源</a>
+      <a href="https://store.steampowered.com/app/646570/Slay_the_Spire/" target="_blank" rel="noopener">Steam 商店 ↗</a>
+      <a href="https://wiki.biligame.com/slaythespire/" target="_blank" rel="noopener">中文 BWIKI ↗</a>
+      <a href="#/about">版本说明</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 尖塔档案 · 仅作非商业攻略与资料整理。Slay the Spire 及相关素材版权归 Mega Crit Games 所有。</p>
+    <button class="to-top" type="button" data-to-top>回到塔顶 ↑</button>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <span class="eyebrow">SPIRE ARCHIVE</span>
+    <button class="menu-close" type="button" aria-label="关闭菜单">×</button>
+  </div>
+  <nav aria-label="移动端导航">
+    <a href="#/" data-mobile-nav><span>01</span>首页</a>
+    <a href="#/heroes" data-mobile-nav><span>02</span>角色</a>
+    <a href="#/cards" data-mobile-nav><span>03</span>卡牌</a>
+    <a href="#/relics" data-mobile-nav><span>04</span>遗物</a>
+    <a href="#/potions" data-mobile-nav><span>05</span>药水</a>
+    <a href="#/enemies" data-mobile-nav><span>06</span>敌人</a>
+    <a href="#/guides" data-mobile-nav><span>07</span>攻略</a>
+    <a href="#/about" data-mobile-nav><span>08</span>关于</a>
+  </nav>
+  <div class="mobile-menu-foot">向上，直到心脏停跳。</div>
+</div>
+
+<div class="search-overlay" id="search-overlay" aria-hidden="true">
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="站内搜索">
+    <div class="search-head">
+      <span class="eyebrow">SEARCH THE ARCHIVE</span>
+      <button class="search-close" type="button" aria-label="关闭搜索">×</button>
+    </div>
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input id="global-search" type="search" placeholder="搜索卡牌、遗物、敌人或攻略…" autocomplete="off" spellcheck="false">
+      <kbd>ESC</kbd>
+    </div>
+    <div class="search-hot" id="search-hot">
+      <span>试试：</span>
+      <button type="button" data-hot="痛击">痛击</button>
+      <button type="button" data-hot="异蛇之眼">异蛇之眼</button>
+      <button type="button" data-hot="时间吞噬者">时间吞噬者</button>
+      <button type="button" data-hot="进阶 20">进阶 20</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="mention-tip" id="mention-tip" role="tooltip" aria-hidden="true"></div>
+<div class="modal-root" id="modal-root" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js?v=20261045"></script>
+<script src="app.js?v=20261045"></script>
+</body>
+</html>
